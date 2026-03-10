@@ -7,7 +7,7 @@
   <title>Home</title>
 </head>
 </head>
-  <body class="flex flex-col min-h-screen">
+  <body class="flex flex-col min-h-screen sticky">
     <header>
       <nav class="flex items-center justify-between p-5 bg-gray-700 text-white static">
         <img src="" alt="logo">
@@ -20,14 +20,21 @@
       </nav>
     </header>
 
-    <main class=" flex-grow max-w-7xl mx-auto  p-5 bg-gray-100">
-      <div class=" flex justify-between mt-5 pt-30 border rounded bg-gray-100">
-        <div>
-          <h1 class="text-4xl font-bold "> Dev Wallet</h1>
-          <p class="text-lg text-gray-600">Dev wallet is a simple cryptocurrency wallet for managing your digital assets.</p>
-        </div>
-        <div>
-          <img src="" alt="home image">
+    <main class=" flex-grow max-w-7xl mx-auto px-6 py-16 md:py-24 bg-gray-100  rounded-3xl shadow-sm w-full">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+
+        <div class="space-y-6">
+           <span class="text-blue-600 font-semibold tracking-wide uppercase text-sm">Secure & Simple</span>
+          <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight"> Dev Wallet</h1>
+          <p class="text-xl text-gray-600 leading-relaxed max-w-md">Dev wallet is a simple cryptocurrency wallet for managing your digital assets.</p>
+          <div class="flex gap-4 pt-4">
+          <button class="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition">Get Started</button>
+          <button class="border border-gray-300 px-8 py-3 rounded-full font-medium hover:bg-gray-50 transition">Learn More</button>
+           </div>
+        </div class="relative">
+            <div class="absolute -inset-4 bg-blue-100 rounded-full blur-3xl opacity-30"></div>
+              <img src="./images/18bc7b51835e0998c30e39b04adfba4e.jpg" alt="home image" class="relative rounded-2xl shadow-2xl transform hover:-translate-y-2 transition duration-500">
+  
         </div>
       </div>
     </main>
