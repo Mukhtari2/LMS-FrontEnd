@@ -9,8 +9,9 @@
 <body class="flex flex-col min-h-screen">
   <header  class="sticky top-0 z-50 w-full">
     <nav class="flex items-center justify-between px-6 py-4 lg:px-12 bg-gray-900/90 backdrop-blur-md border-b border-white/10 text-white transition-all duration-300 gap-4">
-      <h2 class="text-3xl font-black tracking-tighter hover:scale-105 transition-transform cursor-pointer lg:text-4xl md:text-2xl lg:font-extrabold text-red-300 leading-tight opacity-70">Muk<span class="bg-gradient-to-r from-red-400 to-orange-300 bg-clip-text text-transparent">htar</span></h2>
-      
+      <h2 class="text-3xl lg:text-4xl font-black tracking-tighter hover:scale-105 transition-transform cursor-pointer text-white">
+        Enesi<span class="bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">Pay</span>
+      </h2>
       <button id="menu-btn" class="block lg:hidden focus:outline-none">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -25,11 +26,9 @@
     </nav>
   </header>
 
-  <main class="flex-grow flex items-center justify-center py-20 px-4 bg-gray-50/50">
-    <!-- Main Registration Card -->
-    <div class="w-full max-w-[500px] bg-white p-10 rounded-[2rem] shadow-2xl shadow-blue-500/5 border border-gray-100 transition-all duration-500 hover:shadow-blue-500/10">
+  <main class="flex-grow flex items-center justify-center py-10 lg:py-20 px-4 bg-gray-50/50">
+    <div class="w-full max-w-[500px] bg-white p-5 rounded-[2rem] shadow-2xl shadow-blue-500/5 border border-gray-100 transition-all duration-500 hover:shadow-blue-500/10">
       
-      <!-- Header Section -->
       <div class="text-center mb-10">
         <div class="inline-flex items-center justify-center w-16 h-16 bg-green-50 rounded-2xl mb-4">
           <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org">
@@ -40,10 +39,10 @@
         <p class="text-gray-500 mt-3 font-medium">Join <span class="text-blue-600 font-bold">Mukhtar</span> and start managing your assets.</p>
       </div>
   
-      <!-- Form Section -->
+     
       <form action="" method="post" class="space-y-5">
         
-        <!-- Full Name -->
+        
         <div class="space-y-1.5">
           <label for="name" class="block text-sm font-bold text-gray-700 ml-1">Full Name</label>
           <input type="text" id="name" name="name" required 
@@ -51,7 +50,6 @@
             placeholder="e.g. Mukhtar Suleiman">
         </div>
   
-        <!-- Email -->
         <div class="space-y-1.5">
           <label for="email" class="block text-sm font-bold text-gray-700 ml-1">Email Address</label>
           <input type="email" id="email" name="email" required 
@@ -59,7 +57,6 @@
             placeholder="name@example.com">
         </div>
   
-        <!-- Phone Number -->
         <div class="space-y-1.5">
           <label for="phone-number" class="block text-sm font-bold text-gray-700 ml-1">Phone Number</label>
           <input type="text" id="phone-number" name="phone-number" required 
@@ -67,7 +64,6 @@
             placeholder="+234 (81) 0000-0000">
         </div>
   
-        <!-- Password -->
         <div class="space-y-1.5">
           <label for="password" class="block text-sm font-bold text-gray-700 ml-1">Password</label>
           <input type="password" id="password" name="password" required 
@@ -75,13 +71,11 @@
             placeholder="••••••••••••">
         </div>
   
-        <!-- Register Button -->
         <button type="submit" 
           class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-2xl shadow-xl shadow-blue-600/20 active:scale-[0.98] transition-all duration-300 mt-6 tracking-wide">
           Create My Account
         </button>
   
-        <!-- Footer Link -->
         <p class="text-center text-sm font-medium text-gray-500 pt-4">
           Already have an account? <a href="login.html" class="text-blue-600 font-bold hover:underline">Log in</a>
         </p>
