@@ -36,6 +36,7 @@
           <i class="fa-brands fa-brave"></i>
           <a href="#">Wallets</a>
         </div>
+
         <button
           id="menuBtn"
           class="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
@@ -55,6 +56,17 @@
             />
           </svg>
         </button>
+         <div
+            id="dropdownMenu"
+            class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50"
+          >
+          <button
+              id="signOutBtn"
+              class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            >
+              Sign Out
+          </button>
+         </div>
       </nav>
     </header>
 
@@ -95,7 +107,7 @@
       </aside>
 
       <!-- Main Content Area -->
-      <main class="flex-1  lg:ml-64 p-8">
+      <div class="flex-1 lg:ml-64 p-8">
         <!-- Top Action Bar -->
         <div
           class="flex items-center justify-between mb-10 border-b border-blue-600 pb-5"
@@ -126,21 +138,23 @@
           </div>
 
           <!-- Profile section (from previous step) goes here -->
-          <button
-            id="profileBtn"
-            class="flex items-center gap-3 focus:outline-none cursor-pointer"
-          >
-            <div class="text-right hidden sm:block">
-              <p class="text-sm font-semibold">Mukhtar Suleiman</p>
-              <p class="text-xs text-gray-400">Wallet</p>
-            </div>
-            <img
-              src="https://ui-avatars.com"
-              alt="Profile"
-              class="w-10 h-10 rounded-full border-2 border-blue-600 object-cover"
-            />
-          </button>
-        </div>
+         
+            <button
+              id="profileBtn"
+              class="flex items-center gap-3 focus:outline-none cursor-pointer"
+            >
+              <div class="text-right hidden sm:block">
+                <p class="text-sm font-semibold">Mukhtar Suleiman</p>
+                <p class="text-xs text-gray-400">Wallet</p>
+              </div>
+              <img
+                src="https://ui-avatars.com"
+                alt="Profile"
+                class="w-10 h-10 rounded-full border-2 border-blue-600 object-cover"
+              />
+            </button> 
+    
+      </div>
 
         <!-- Stats Grid / Wallet Card -->
         <div class="grid grid-cols-1 md:grid-cols-3 md:w-full gap-6">
@@ -297,6 +311,8 @@
     <script>
       const sidebar = document.getElementById("sidebar");
       const menuBtn = document.getElementById("menuBtn");
+      const signOutBtn = document.getElementById("signOutBtn");
+      const dropdownMenu = document.getElementById("dropdownMenu");
 
       menuBtn.addEventListener("click", (e) => {
         e.stopPropagation(); // Prevents immediate closing
@@ -305,9 +321,20 @@
 
       // Close dropdown when clicking outside
       document.addEventListener("click", (e) => {
-        if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+        if (!sidebar.contains(e.target) && !menuBtn.contains(e.target) && !signOutBtn.contains(e.target)) {
           sidebar.classList.add("hidden");
         }
+      });
+
+      menuBtn.addEventListener("click", () => {
+        dropdownMenu.classList.toggle("hidden");
+      });
+
+      // Sign out button functionality
+      signOutBtn.addEventListener("click", () => {
+        localStorage.clear();
+        alert("You have been signed out.");
+        window.location.href = "login.html"; // Change this to your desired redirect URL
       });
     </script>
   </body>
