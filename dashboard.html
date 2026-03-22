@@ -16,7 +16,7 @@
       <!-- Sidebar -->
       <aside
         id="sidebar"
-        class="hidden lg:flex flex-col fixed left-0 top-0 w-64 h-full bg-black/20 border-r border-white/5 backdrop-blur-xl z-20"
+        class="fixed lg:translate-x-0 -translate-x-full lg:flex flex-col fixed left-0 top-0 w-64 h-full bg-black/20 border-r border-white/5 backdrop-blur-xl z-20"
       >
         <div class="p-8">
           <div
@@ -92,7 +92,7 @@
             </div>
           </div>
           <button
-            id="open-menu"
+            id="menuBtn"
             class="lg:hidden p-2 text-gray-400 hover:text-white transition-colors"
           >
             <i class="fa-solid fa-bars-staggered text-2xl"></i>
@@ -116,7 +116,7 @@
                 >
                   Total Balance
                 </h2>
-                <p class="text-4xl font-bold tracking-tight">₦5,890.00</p>
+                <p class="text-4xl font-bold tracking-tight">₦5,600,890.00</p>
               </div>
               <button
                 class="mt-8 w-full bg-white text-blue-700 font-bold py-3.5 rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all active:scale-95"
@@ -139,7 +139,7 @@
               <h2 class="text-gray-400 text-sm font-medium mb-1">
                 Monthly Spend
               </h2>
-              <p class="text-2xl font-bold">₦1,200.00</p>
+              <p class="text-2xl font-bold">₦880,900.00</p>
             </div>
             <p
               class="text-xs text-orange-400 mt-4 font-medium flex items-center gap-1"
@@ -224,6 +224,23 @@
     </div>
 
     <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const sidebar = document.getElementById("sidebar");
+
+      menuBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("-translate-x-full");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (
+          !sidebar.contains(e.target) &&
+          !menuBtn.contains(e.target) &&
+          window.innerWidth < 1024
+        ) {
+          sidebar.classList.add("-translate-x-full");
+        }
+      });
+
       const handleLogout = () => {
         window.location.href = "index.html";
       };
