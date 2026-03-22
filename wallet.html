@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com" />
+    <script
+      src="https://kit.fontawesome.com/6ce543c97f.js"
+      crossorigin="anonymous"
+    ></script>
     <title>My Wallets | DevWallet</title>
   </head>
   <body class="bg-[#0b0e11] text-gray-100 font-sans antialiased min-h-screen">
     <div class="max-w-6xl mx-auto p-6 lg:p-12">
-      <!-- Header -->
       <header class="flex items-center justify-between mb-12">
         <div>
           <a
@@ -20,6 +23,7 @@
           </a>
           <h1 class="text-3xl font-bold tracking-tight">My Wallets</h1>
         </div>
+
         <button
           class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-3 rounded-2xl font-bold transition-all shadow-lg shadow-blue-900/40"
         >
@@ -28,9 +32,7 @@
       </header>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <!-- Left Side: Wallet Cards -->
         <div class="lg:col-span-2 space-y-6">
-          <!-- Main Wallet -->
           <div class="relative group cursor-pointer">
             <div
               class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-[2.5rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"
@@ -61,7 +63,6 @@
             </div>
           </div>
 
-          <!-- Savings Wallet -->
           <div
             class="bg-white/5 border border-white/10 p-8 rounded-[2.5rem] hover:bg-white/[0.08] transition-all group"
           >
@@ -88,9 +89,7 @@
           </div>
         </div>
 
-        <!-- Right Side: Quick Actions & Details -->
         <div class="space-y-6">
-          <!-- Quick Transfer -->
           <div
             class="bg-white/5 border border-white/10 p-8 rounded-[2.5rem] backdrop-blur-xl"
           >
@@ -132,7 +131,6 @@
             </div>
           </div>
 
-          <!-- Security Tip -->
           <div
             class="p-6 rounded-[2rem] bg-amber-500/10 border border-amber-500/20"
           >
