@@ -255,7 +255,7 @@
           const formData = new FormData(e.target);
           const data = Object.fromEntries(formData.entries());
 
-          // try {
+          try {
             const response = await fetch(
               "http://localhost:8080/api/v1/users/new_users",
               {
@@ -274,11 +274,11 @@
               const error = await response.json();
               alert("Error: " + (error.message || "Failed to create account"));
             }
-          // } catch (err) {
-          //   console.error("Network error:", err);
-          //   alert("Could not connect to the server.");
-          // }
-          });
+          } catch (err) {
+            console.error("Network error:", err);
+            alert("Could not connect to the server.");
+          }
+        });
     </script>
   </body>
 </html>
